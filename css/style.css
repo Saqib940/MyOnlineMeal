@@ -1,0 +1,262 @@
+/* CSS reset */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* CSS Variables */
+:root {
+    --border: 2px solid black;
+    --color: #ffffff;
+    --font-family1: 'Baloo Bhai 2', cursive;
+    --font-family2: 'bree serif', serif;
+}
+
+/* Navigation Bar */
+#navbar {
+    /* border: var(--border); */
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0px;
+}
+
+#navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+/* Navigation Bar: Logo & Image*/
+#logo {
+    /* border: var(--border); */
+    margin: 3px 20px;
+}
+
+#logo img {
+    /* border: var(--border); */
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+/* Navigation Bar: List Styling */
+
+#navbar ul {
+    display: flex;
+    font-family: var(--font-family1);
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1rem;
+
+}
+
+#navbar ul li a {
+    color: var(--color);
+    /* border: var(--border); */
+    /* (padding) is given in (anchor) tag so that while hovering whole padding region transform */
+    padding: 5px 10px;
+    display: block;
+    text-decoration: none;
+    border-radius: 100px;
+}
+
+#navbar ul li a:hover {
+    color: black;
+    background-color: var(--color);
+}
+
+/* Home Section */
+#home {
+    /* border: var(--border); */
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 440px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before {
+    content: "";
+    /* (..) is used to go back from "CSS" folder to "img" folder */
+    background: url(../img/bg_1.jpg) no-repeat center center/cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 520px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.80;
+}
+
+#home h1 {
+    color: var(--color);
+    text-align: center;
+    font-family: var(--font-family2)
+}
+
+#home p {
+    color: var(--color);
+    text-align: center;
+    font-size: 1rem;
+    font-family: var(--font-family2)
+}
+
+/* Services Section*/
+
+#services {
+    /* border: var(--border); */
+    margin: 20px;
+    display: flex;
+}
+
+#services .box {
+    /* border: var(--border); */
+    margin: 3px 6px;
+    padding: 30px;
+    background-color: #fff6f4;
+    border-radius: 23px;
+}
+
+#services .box img {
+    /* border: var(--border); */
+    height: 160px;
+    display: block;
+    margin: auto;
+}
+
+#services .box p {
+    /* border: var(--border); */
+    font-style: var(--font-family1);
+}
+
+/* Client Section */
+
+#client-section {
+    /* border: var(--border); */
+    height: 370px;
+}
+#client-section::before {
+    content: "";
+    background: url(../img/bg_2.jpg) no-repeat center center/cover;
+    position: absolute;
+    height: 370px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.80;
+}
+
+
+#clients {
+    /* border: var(--border); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 10px;
+}
+
+.client-item{
+    padding: 15px;
+}
+
+#clients img{
+    /* border: var(--border); */
+    display: flex;
+    height: 150px;
+}
+
+/* Contact Section */
+#contact{
+    position: relative;
+}
+
+#contact-box::before{
+    /* border: var(--border); */
+    content: "";
+    background: url(../img/form.jpg) no-repeat center center/cover;
+    position: absolute;
+    height: 375px;
+    width: 560px;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+#contact-box{
+    /* border: var(--border); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+#contact-box input,
+#contact-box textarea{
+    /* border: var(--border); */
+    padding: 5px 10px;
+    width: 500px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+}
+
+#contact-box form{
+    /* border: var(--border); */
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-box label{
+    /* border: var(--border); */
+    font-size: 1rem;
+    font-family: var(--font-family1);
+}
+
+/* Footer */
+
+footer{
+    font-style: var(--font-family2);
+    background-color: black;
+    color: var(--color);
+    padding: 10px 20px;
+    opacity: 0.8;
+}
+
+/* Utility Classes */
+.h-primary {
+    font-style: var(--font-family1);
+    font-size: 2.5rem;
+    padding: 12px;
+}
+
+.h-secondary {
+    font-style: var(--font-family1);
+    font-size: 1.5rem;
+    padding: 12px;
+}
+
+.btn {
+    border: 2px solid white;
+    color: var(--color);
+    padding: 6px 20px;
+    margin: 20px;
+    background-color: brown;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+}
